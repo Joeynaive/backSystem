@@ -97,6 +97,33 @@
   color: #000;
 }
 
+.login-other {
+  width: 100%; 
+  height: 84px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-info {
+  width: 100%;
+  color: rgb(153, 153, 153);
+  font-size: 10px;
+}
+
+.login-other-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.login-other-icon-box {
+  display: flex;
+  flex-direction: row;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 #container {
   background-image: url(../img/login-tn.jpg);
   background-size: 100% 100%;
