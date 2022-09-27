@@ -4,40 +4,46 @@
   padding: 30px 32px;
   border-radius: 4px;
   background-color: #fff;
+  .ant-input:focus {
+    box-shadow: none;
+  }
+  .ant-tabs-tab-btn {
+    color: #999;
+  }
+  .ant-tabs-ink-bar {
+    background: #242424;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #242424;
+  }
 }
 
- html {
+html {
   --antd-wave-shadow-color: #ddd !important;
 }
 
-.login .ant-input:focus {
-  box-shadow: none;
-}
-
-.login .ant-tabs-tab-btn {
-  color: #999;
-}
-
-.login .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #242424;
-}
-
-.login .ant-tabs-ink-bar {
-  background: #242424;
-}
-
-.login_password .ant-input {
-  background: #f4f4f4;
-}
-
-.login_password .ant-input:hover, .ant-checkbox-input:hover {
-  border: 1px solid #ddd;
-  box-shadow: none;
-  outline:none
-}
-
-.login_password .ant-checkbox-input:hover {
-  border: 1px solid #ddd !important;
+.login_password {
+  .ant-input {
+    background: #f4f4f4;
+  }
+  .ant-checkbox-input:hover {
+    border: 1px solid #ddd !important;
+  }
+  .ant-input:hover, .ant-checkbox-input:hover {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    outline:none
+  }
+  .ant-input:focus, .ant-input-focused {
+    background: #fff;
+    /* border-color: #ddd; */
+  }
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      background-color: #ffe300;
+      border: 1px solid #ffe300;
+    }
+  }
 }
 
 .login_password-input {
@@ -51,50 +57,36 @@
   border-radius: 4px;
 }
 
-.login_password .ant-input:focus, .ant-input-focused {
-  background: #fff;
-  /* border-color: #ddd; */
-}
-
 .login_password-btn {
   width: 100%;
-}
-
-.login_password .ant-btn {
   height: 42px;
   color: #444;
   background-color: #ffe300;
   border: 1px solid #ffe300;
   border-radius: 4px;
+  &:hover {
+    color: #444;
+    background-color: #ffcb2f;
+    border: 1px solid #ffcb2f;
+  }
 }
 
-.login_password .ant-checkbox-checked .ant-checkbox-inner {
-  background-color: #ffe300;
-  border: 1px solid #ffe300;
-}
-
-.login_password .ant-btn:hover {
-  color: #444;
-  background-color: #ffcb2f;
-  border: 1px solid #ffcb2f;
-}
-
-.login_password-form-footer .ant-form-item-control-input-content {
-  display: flex;
-  justify-content: space-between;
+.login_password-form-footer {
+  .ant-form-item-control-input-content {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .login_password-form-footer-right {
   color: #eee !important;
   margin-top: 5px;
-}
-
-.login_password-form-footer-right a {
-  color: #8e8e8e;
-}
-
-.login_password-form-footer-right a:hover {
-  color: #000;
+  a {
+    color: #8e8e8e;
+  }
+  a:hover {
+    color: #000;
+  }
 }
 
 .login-other {
@@ -124,7 +116,7 @@
   cursor: pointer;
 }
 
-#container {
+#root {
   background-image: url(../img/login-tn.jpg);
   background-size: 100% 100%;
   width: 100vw;
@@ -132,4 +124,4 @@
   display: flex;
   justify-content: center;
   align-items: center;  
-}
+} 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Input, Tabs, Checkbox, Button } from 'antd';
-import './index.css';
+import './index.less';
 
 const Login = () => {
   const [form] = Form.useForm();
@@ -9,13 +9,16 @@ const Login = () => {
   function onFinish() {
     form.validateFields().then(v => {
       console.log(v);
-    })
+    });
   }
+
+  useEffect(() => {
+  }); 
 
   async function onChange() {
     const values = await form.validateFields();
     console.log(values);
-    const {mobile = '', password = '' } = values;
+    const { mobile = '', password = '' } = values;
     if (mobile && password) {
       setLoginDisabled(false);
       return;
@@ -39,7 +42,7 @@ const Login = () => {
                 </Form.Item>
                 <Form.Item>
                   <Button className="login_password-btn" 
-                    htmlType='submit' 
+                    htmlType="submit" 
                     disabled={loginDisabled}
                   >登录</Button>
                 </Form.Item>
@@ -48,22 +51,22 @@ const Login = () => {
                     <Checkbox value={1}>下次自动登录</Checkbox>
                   </Form.Item>
                   <div className="login_password-form-footer-right">
-                    <a href='' target="_blank">忘记密码</a>
+                    <a href="" target="_blank">忘记密码</a>
                     &nbsp;｜&nbsp;
-                    <a href='' target="_blank">注册</a>
+                    <a href="" target="_blank">注册</a>
                   </div>
                 </Form.Item>
                 <div className="login-other">
                   <div className="login-other-title">第三方账号登录</div>
                   <div className="login-other-icon">
                     <div className="login-other-icon-box">
-                      <img src="../img/qq.png"></img>
+                      <img src="@/img/qq.png"></img>
                     </div>
                     <div className="login-other-icon-box">
-                      <img src="../img/wechat.png"></img>
+                      <img src="@/img/wechat.png"></img>
                     </div>
                     <div className="login-other-icon-box">
-                      <img src="../img/weibo.png"></img>
+                      <img src="@/img/weibo.png"></img>
                     </div>
                   </div>
                 </div>
@@ -80,7 +83,7 @@ const Login = () => {
         </div>
       </Form>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

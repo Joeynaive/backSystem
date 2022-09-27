@@ -1,0 +1,10 @@
+.DS_Store
+/scripts
+/config
+.history
+public
+dist
+
+/public/js/
+
+*.config.js
