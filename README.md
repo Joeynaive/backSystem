@@ -12,7 +12,7 @@ npm run serve
 
 1. if 和 function 后面不需要写分号，Form 后需要写。
 2. If 语句中写 return，就不用写成 else 的形式了，避免嵌套。
-一个 if 对应一个 return，return掉的一般是异常情况。
+一个 if 对应一个 return，return 掉的一般是异常情况。
 3. 命名风格要统一
 如 onClickResetButton、onClickDeleteRows、onClickAddButton、
 onClickEditButton、onClickDeleteItem、
@@ -38,20 +38,20 @@ type QuestioningMange = HttpGetQuestioningMangeRes;
 15. 子组件的 onClick 事件写在子组件中，不要写在父组件中
 16. 判断一个函数是否存在时，可以直接用 ?.
     如reload?.()       onClick?.()
-17. map 渲染 UI 时，通过document.getElementById获取到的dom元素，id一定要加key，否则多个元素获取到的都是同一个dom
-18. visible 的弹框，visible && < />，组件每次销毁，走onMount；
-不要用 visible && < />，组件onMount一次，后面都走update。
+17. map 渲染 UI 时，通过 document.getElementById 获取到的 dom 元素，id 一定要加 key，否则多个元素获取到的都是同一个 dom
+18. visible 的弹框，visible && < />，组件每次销毁，走 onMount；
+不要用 visible && < />，组件 onMount 一次，后面都走 update。
 19. 组件要考虑无数据时的样式，以及要根据字段判断一下展示，不要单纯展示后端字段数据
 20. 使用 ref 时，先考虑此时相应的 dom 存不存在
-21. 考虑后端字段返回为 null 时的情况，不要直接用data.  页面会直接报错红屏，使用data?.  ??
-22. modal 可封装 onOpen、onClose。modal中封装自定义的 onClose, 调用时，只清空组件数据，防止页面数据闪烁，在组件的close中封装closeModal, 调用 onClose和 props 的 close。
+21. 考虑后端字段返回为 null 时的情况，不要直接用 data.  页面会直接报错红屏，使用data?.  ??
+22. modal 可封装 onOpen、onClose。modal 中封装自定义的 onClose, 调用时，只清空组件数据，防止页面数据闪烁，在组件的close 中封装 closeModal, 调用 onClose和 props 的 close。
 23. 引用样式时先看 utils 中有没有对应的样式
 24. 嵌套对象过深时使用 use-immer
 25. 有明确类型的选项都定义为枚举，如 tab、radio 选项
 26. .then .catch 要换行对齐
 27. await then 不要连用，用了 async await，就不要用 .then
 28. useState 的空对象{}, 可以定义一个初始对象 const initialXxx = {a: 1, b: 2}
-29. 如果多于一种样式，则可以考虑扩展，定义成一个map
+29. 如果多于一种样式，则可以考虑扩展，定义成一个 map
 enum AnswerResult {
   'FALSE',
   'TRUE',
@@ -66,3 +66,4 @@ const xxxMap = { // 名称小驼峰或全大写
 33. classNames 中样式要对齐
 34. UI中展示的变量括号中有空格，属性中的括号不用加空格
 35. css样式中不要写 !important，直接用.的形式加个优先级即可
+36. 接口请求 interface 命名，请求 HttpGetXxxReq, 返回 HttpGetXxxRes
