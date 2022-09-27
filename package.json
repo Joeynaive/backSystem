@@ -1,18 +1,26 @@
 {
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "name": "back-system",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx ./src"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0"
+  },
   "dependencies": {
     "@ant-design/icons": "latest",
     "@types/node": "^18.7.23",
+    "@typescript-eslint/parser": "^5.38.1",
     "@vitejs/plugin-react": "^2.1.0",
     "ahooks": "^3.7.0",
     "antd": "4.22.5",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.24.0",
+    "eslint-plugin-react": "^7.31.8",
     "history": "^5.3.0",
     "react": "^16.14.0",
     "react-color": "^2.19.3",
@@ -29,11 +37,10 @@
     "postcss": "^8.4.16",
     "typescript": "^4.0.5"
   },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx ./src"
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

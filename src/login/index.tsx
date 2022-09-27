@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Input, Tabs, Checkbox, Button } from 'antd';
+import { Form, Input, Tabs, Checkbox, Button, Radio } from 'antd';
 import './index.less';
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
     });
   }
 
-  useEffect(() => {
+  useEffect( () => {
   }); 
 
   async function onChange() {
@@ -60,13 +60,13 @@ const Login = () => {
                   <div className="login-other-title">第三方账号登录</div>
                   <div className="login-other-icon">
                     <div className="login-other-icon-box">
-                      <img src="@/img/qq.png"></img>
+                      <img src="/src/img/qq.png"></img>
                     </div>
                     <div className="login-other-icon-box">
-                      <img src="@/img/wechat.png"></img>
+                      <img src="/src/img/wechat.png"></img>
                     </div>
                     <div className="login-other-icon-box">
-                      <img src="@/img/weibo.png"></img>
+                      <img src="/src/img/weibo.png"></img>
                     </div>
                   </div>
                 </div>
