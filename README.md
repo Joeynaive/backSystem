@@ -52,14 +52,16 @@ type QuestioningMange = HttpGetQuestioningMangeRes;
 27. await then 不要连用，用了 async await，就不要用 .then
 28. useState 的空对象{}, 可以定义一个初始对象 const initialXxx = {a: 1, b: 2}
 29. 如果多于一种样式，则可以考虑扩展，定义成一个 map
-enum AnswerResult {
-  'FALSE',
-  'TRUE',
-}
-const xxxMap = { // 名称小驼峰或全大写
-  [AnswerResult.TRUE]: { text: '正确’, className: xxx },
-  [AnswerResult.FALSE]: { text: '错误', className: xxx },
-};
+```js
+  enum AnswerResult {
+    'FALSE',
+    'TRUE',
+  };
+  const xxxMap = { // 名称小驼峰或全大写
+    [AnswerResult.TRUE]: { text: '正确’, className: xxx },
+    [AnswerResult.FALSE]: { text: '错误', className: xxx },
+  };
+```
 30. className 和标签写在一行
 31. 换行后前一行最后不能有空格
 32. { 和 ( 写在一行
