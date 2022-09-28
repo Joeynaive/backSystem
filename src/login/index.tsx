@@ -16,7 +16,7 @@ const Login = () => {
   }); 
 
   function click() {
-    console.log(a);
+    // console.log(a);
   }
 
   async function onChange() {
