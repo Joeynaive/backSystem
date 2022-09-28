@@ -15,6 +15,10 @@ const Login = () => {
   useEffect( () => {
   }); 
 
+  function click() {
+    // console.log(a);
+  }
+
   async function onChange() {
     const values = await form.validateFields();
     console.log(values);
@@ -44,6 +48,7 @@ const Login = () => {
                   <Button className="login_password-btn" 
                     htmlType="submit" 
                     disabled={loginDisabled}
+                    onClick={click}
                   >登录</Button>
                 </Form.Item>
                 <Form.Item className="login_password-form-footer">
