@@ -8,11 +8,6 @@
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx ./src"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0"
   },
