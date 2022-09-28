@@ -1,5 +1,13 @@
 module.exports = {
-  extends: ['plugin:react/recommended'],
+  plugins: [
+    '@typescript-eslint',
+  ],
+  extends: [
+    // 'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   ignorePatterns: ['postcss.config.js', 'vite.config.ts'],
   globals: {
@@ -12,6 +20,7 @@ module.exports = {
     'no-continue': [0],
     'no-lonely-if': [0],
     '@typescript-eslint/no-unused-expressions': [0],
+    '@typescript-eslint/no-unused-vars': [2],
     // 代码缩进
     'indent': [2, 2, {
       'SwitchCase': 1, // 强制 switch 语句中的 case 子句的缩进级别
@@ -119,5 +128,7 @@ module.exports = {
     // 'no-console': process.env.REACT_APP_ENV === 'dev' ? 0 : [2, {
     //   'allow': ['warn', 'error'],
     // }],
+
+    '@typescript-eslint/no-empty-function': 0,
   },
 };
